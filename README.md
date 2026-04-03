@@ -1,4 +1,11 @@
-# toy-gpt-train
+# Toy-GPT: train-302-context-2-repo-tour
+
+[![Docs](https://img.shields.io/badge/docs-live-blue)](https://toy-gpt.github.io/train-302-context-2-repo-tour/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
+[![CI](https://github.com/toy-gpt/train-302-context-2-repo-tour/actions/workflows/ci-python-mkdocs-shared.yml/badge.svg?branch=main)](https://github.com/toy-gpt/train-302-context-2-repo-tour/actions/workflows/ci-python-mkdocs-shared.yml)
+[![Deploy-Docs](https://github.com/toy-gpt/train-302-context-2-repo-tour/actions/workflows/deploy-mkdocs-shared.yml/badge.svg?branch=main)](https://github.com/toy-gpt/train-302-context-2-repo-tour/actions/workflows/deploy-mkdocs-shared.yml)
+[![Check Links](https://github.com/toy-gpt/train-302-context-2-repo-tour/actions/workflows/links.yml/badge.svg)](https://github.com/toy-gpt/train-302-context-2-repo-tour/actions/workflows/links.yml)
+[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/toy-gpt/train-302-context-2-repo-tour/security)
 
 > Demonstrates, at very small scale, how a language model is trained.
 
@@ -19,7 +26,7 @@ This repository is part of a series of toy training repositories plus a companio
 
 This is:
 
-- an educational, inspectable training pipeline
+- an intentionally inspectable training pipeline
 - a next-token predictor trained on an explicit corpus
 
 This is not:
@@ -33,14 +40,6 @@ This is not:
 
 This repository produces and commits pretrained artifacts under `artifacts/`.
 
-These artifacts are intended to be loaded by the companion client repository.
-
-Typical artifacts include:
-
-- `artifacts/vocab.json`
-- `artifacts/weights.csv` (or similar)
-- `artifacts/model_meta.json`
-
 Training logs and evidence are written under `outputs/`
 (for example, `outputs/train_log.csv`).
 
@@ -51,10 +50,14 @@ See `SETUP.md` for full setup and workflow instructions.
 Run the full training script:
 
 ```shell
-uv run python src/toy_gpt_train/e_infer.py
+uv run python src/toy_gpt_train/d_train.py
 ```
 
-Run individual pipeline steps:
+Run individually:
+
+- a/b/c are demos (can be run alone if desired)
+- d_train produces artifacts
+- e_infer consumes artifacts
 
 ```shell
 uv run python src/toy_gpt_train/a_tokenizer.py
@@ -64,16 +67,25 @@ uv run python src/toy_gpt_train/d_train.py
 uv run python src/toy_gpt_train/e_infer.py
 ```
 
-Build and serve documentation:
-
-```shell
-uv run mkdocs build --strict
-uv run mkdocs serve
-```
-
 ## Provenance and Purpose
 
 The primary corpus used for training is declared in `SE_MANIFEST.toml`.
 
 This repository commits pretrained artifacts so the client can run
 without retraining.
+
+## Annotations
+
+[ANNOTATIONS.md](./ANNOTATIONS.md) - REQ/WHY/OBS annotations used
+
+## Citation
+
+[CITATION.cff](./CITATION.cff)
+
+## License
+
+[MIT](./LICENSE)
+
+## SE Manifest
+
+[SE_MANIFEST.toml](./SE_MANIFEST.toml) - project intent, scope, and role
