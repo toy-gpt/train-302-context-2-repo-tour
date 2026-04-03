@@ -40,6 +40,14 @@ This is not:
 
 This repository produces and commits pretrained artifacts under `artifacts/`.
 
+These artifacts are intended to be loaded by the companion client repository.
+
+Typical artifacts include:
+
+- `artifacts/vocab.json`
+- `artifacts/weights.csv` (or similar)
+- `artifacts/model_meta.json`
+
 Training logs and evidence are written under `outputs/`
 (for example, `outputs/train_log.csv`).
 
