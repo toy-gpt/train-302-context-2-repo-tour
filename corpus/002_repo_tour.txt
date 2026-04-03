@@ -1,0 +1,63 @@
+a repository is a collection of files
+a repository contains code and documentation
+a repository is tracked with git
+
+a readme file explains a project
+a readme file describes purpose
+a readme file provides instructions
+
+a license file states permissions
+a license file defines reuse terms
+a license file protects authors
+
+a gitignore file lists ignored files
+a gitignore file prevents committing secrets
+a gitignore file reduces noise
+
+a gitattributes file controls line endings
+a gitattributes file ensures consistency
+a gitattributes file improves portability
+
+a pyproject toml file defines dependencies
+a pyproject toml file defines tools
+a pyproject toml file configures a project
+
+a src folder contains source code
+a src folder separates code from data
+a src folder improves structure
+
+a tests folder contains test code
+a tests folder verifies behavior
+a tests folder supports refactoring
+
+a docs folder contains documentation
+a docs folder supports mkdocs
+a docs folder improves usability
+
+a virtual environment isolates dependencies
+a virtual environment prevents conflicts
+a virtual environment supports reproducibility
+
+a version control system tracks changes
+a version control system supports collaboration
+a version control system records history
+
+a commit records a snapshot
+a commit includes a message
+a commit documents intent
+
+a branch isolates work
+a branch supports experimentation
+a branch reduces risk
+
+a pull request proposes changes
+a pull request enables review
+a pull request improves quality
+
+continuous integration runs checks
+continuous integration enforces standards
+continuous integration detects errors
+
+a workflow automates tasks
+a workflow runs on events
+a workflow improves reliability

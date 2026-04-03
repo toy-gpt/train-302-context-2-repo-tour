@@ -1,0 +1,43 @@
+{
+  "artifacts": {
+    "00_meta.json": "00_meta.json",
+    "01_vocabulary.csv": "01_vocabulary.csv",
+    "02_model_weights.csv": "02_model_weights.csv",
+    "03_token_embeddings.csv": "03_token_embeddings.csv"
+  },
+  "concepts": {
+    "context": "The fixed number of preceding tokens used as input to predict the next token.",
+    "cross_entropy_loss": "A measure of how well the predicted probability distribution matches the correct next token.",
+    "gradient_descent": "An optimization process that incrementally adjusts weights to reduce prediction error.",
+    "softmax": "A function that converts raw scores into probabilities that sum to 1.0.",
+    "token": "An atomic symbol produced by the tokenizer (e.g., a word).",
+    "vocabulary": "The set of all unique tokens observed in the corpus, mapped to integer IDs."
+  },
+  "corpus": {
+    "description": "The corpus is tokenized sequential text. Training pairs are derived by sliding a fixed-size context window over the token stream.",
+    "filename": "002_repo_tour.txt",
+    "num_chars": 1717,
+    "num_lines": 48,
+    "path": "corpus\\002_repo_tour.txt",
+    "sha256": "723ef0c863d100a868a1376d52db4c45737116d39c8d576188fcd44cbdec6f48"
+  },
+  "model_kind": "context2",
+  "notes": [
+    "This is an intentionally inspectable training pipeline.",
+    "Models are trained using softmax regression with cross-entropy loss.",
+    "Weights are updated incrementally via gradient descent.",
+    "Token embeddings are a derived 2D projection for visualization only in levels 100-400.",
+    "In later stages (500+), embeddings are a learned parameter table."
+  ],
+  "repo_name": "train-302-context-2-repo-tour",
+  "start_tokens": [
+    "a",
+    "repository"
+  ],
+  "training": {
+    "epoch_definition": "One epoch is a complete pass through all training pairs. Each pair contributes one gradient update.",
+    "epochs": 50,
+    "learning_rate": 0.1
+  },
+  "vocab_size": 109
+}
